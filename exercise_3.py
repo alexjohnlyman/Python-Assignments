@@ -1,24 +1,25 @@
 
-#option 1
-gal = float(raw_input("Please enter the number of gallons of gasoline: "))
-liter = gal * 3.7854
-barrel = gal / 19.5
-CarDi = gal * 20
-energy = (gal * 115000)/75700
-cost = gal * 4
+#Option 1 - without the letter check
+mph = float(raw_input("Please enter a speed in miles/hour: "))
+#Conversions
+meterPerHour = mph * 1609.34
+barrel = mph / 19.5
+CarDi = mph * 20
+energy = (mph * 115000)/75700
+cost = mph * 4
 
-if gal == 0:
-    gal = float(raw_input("You cannot use 0. Please enter the number of gallons of gasoline: "))
+if mph == 0:
+    mph = float(raw_input("You cannot use 0. Please enter a speed in miles/hour: "))
 
-print "Original number of gallons is: %f" %(gal)
-print "%f gallons is equivalent of %f liters" %(gal, liter)
-print "%f gallons of gasoline requires %f barrels of oil" %(gal, barrel)
-print "%f gallons of gasoline produces %f pounds of CO2" %(gal, CarDi)
-print "%f gallons of gasoline is energy equivalent to %f gallons of ethanol" %(gal, energy)
-print "%f gallons of gasoline requires $%f US dollars" %(gal, cost)
+print "Original speed in mph is: %f" %(mph)
+print "%f mph is equivalent of %f liters" %(mph, liter)
+print "%f mph of gasoline requires %f barrels of oil" %(mph, barrel)
+print "%f mph of gasoline produces %f pounds of CO2" %(mph, CarDi)
+print "%f mph of gasoline is energy equivalent to %f mph of ethanol" %(mph, energy)
+print "%f mph of gasoline requires $%f US dollars" %(mph, cost)
 
 
-# option 2
-try
-
-    except
+# # option 2
+# try
+#
+#     except
