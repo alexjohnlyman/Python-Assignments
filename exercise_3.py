@@ -2,8 +2,9 @@
 #Option 1 - without the letter check
 mph = float(raw_input("Please enter a speed in miles/hour: "))
 #Conversions
-meterPerHour = mph * 1609.34
-barrel = mph / 19.5
+meter_hour = mph * 1609.34
+barleycorn_day = meter_hour * 24
+furlong =
 CarDi = mph * 20
 energy = (mph * 115000)/75700
 cost = mph * 4
