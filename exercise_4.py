@@ -21,9 +21,6 @@ print "New population in %i years will change by %f to be %f" %(years, total_inc
 
 
 
-
-
-
 # # option 2 letter check
 # def get_info():
 #     mph = raw_input("Please enter a speed in miles/hour: ")
