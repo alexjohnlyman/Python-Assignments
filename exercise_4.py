@@ -20,7 +20,7 @@ def get_input(message):
     user_input = str(raw_input(message))
     if user_input < "1":
         print("Cannot be 0 or a letter!")
-    elif user_input.isdigit() and user_input is not 0 and user_input is not "" and user_input is not ".":
+    elif user_input.isdigit() and user_input is not "" and user_input is not ".":
         user_input = float(user_input)
         return user_input
     else:
