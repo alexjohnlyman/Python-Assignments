@@ -31,106 +31,23 @@ print "      2. Write input to screen"
 print "      3. Quit"
 print "   ******************************"
 
-
-
-
-def get_input(message):
-    user_input = str(raw_input(message))
-    if user_input >= "1" and user_input <= "3":
+def get_input():
+    first_choice = str(raw_input("Enter your choice [1-3]: "))
+    if first_choice >= "1" and first_choice <= "3":
         if first_choice == "1":
-            second_choice = str(raw_input("Enter a phrase:  "))
+            second_choice = str(raw_input("Enter a phrase to write to a file:  "))
             new_file = open('text.txt', 'w+')
             new_file.write(second_choice)
             new_file.close()
-            print new_file
-            return None
+            return get_input()
         elif first_choice == "2":
-            second_choice = str(raw_input("Enter a phrase:  "))
+            second_choice = str(raw_input("Enter a phrase to print to the screen:  "))
             print "You entered: " + second_choice
-            return None
+            return get_input()
         elif first_choice == "3":
             print "You are quitting"
-            return None
     else:
         print("Must be 1, 2, 3")
         return None
 
-first_choice = None
-while first_choice is None:
-    first_choice = get_input("Enter your choice [1-3]: ")
-
-
-
-
-
-
-# def get_input(message):
-#     user_input = str(raw_input(message))
-#     if user_input >= "1" and user_input <= "3":
-#         return user_input
-#     else:
-#         print("Must be 1, 2, 3")
-#     return None
-#
-# def get_input_2(second_message):
-#     user_input_2 = str(raw_input(second_message))
-#     if first_choice == "1":
-#         new_file = open('text.txt', 'w+')
-#         new_file.write(first_choice)
-#         new_file.close()
-#         print new_file
-#         return first_choice
-#     elif first_choice == "2":
-#         print "You entered: " + user_input_2
-#         return None
-#     else:
-#         print "You are quitting"
-#
-#
-# first_choice = None
-# while first_choice is None:
-#     first_choice = get_input("Enter your choice [1-3]: ")
-#
-# second_choice = None
-# while second_choice is None:
-#     second_choice = get_input_2("Enter a phrase:  ")
-
-
-# John's way
-# def choose():
-#     print " Menu \n What would you like to do? \n 1. Write input to file \n 2. Write input to screen \n 3. Quit"
-#     choice = raw_input("Which do you choose?: ")
-#     if choice == "1":
-#         text = raw_input("Type text here: ")
-#         f = open('text.txt', 'a+')
-#         f.write(text)
-#         f.close
-#         return choose()
-#     elif choice == "2":
-#         text = raw_input("Type text here: ")
-#         print text
-#         return choose()
-#     elif choice == "3":
-#         return choice
-#     else:
-#         print "Please choose 1, 2, or 3"
-#         return choose()
-# choose()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+get_input()
