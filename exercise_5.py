@@ -158,23 +158,42 @@
 #
 # #######################################################################################################################
 
-class car():
-    wheels = "4 wheels"
-    def __init__(self, color, year, owner, model):
-        self.color = color
-        self.year = year
-        self.owner = owner
-        self.model = model
-    def __str__(self):
-        return "{} has a {} {} with {}".format(self.owner, self.color, self.year, self.wheels)
+# class car():
+#     wheels = "4 wheels"
+#     def __init__(self, color, year, owner, model):
+#         self.color = color
+#         self.year = year
+#         self.owner = owner
+#         self.model = model
+#     def __str__(self):
+#         return "{} has a {} {} with {}".format(self.owner, self.color, self.year, self.wheels)
+#
+# car1 = car("white", 2003, "Jessica", "Dodge")
+# car2 = car("black", 2001, "Jim", "Ford")
+# car3 = car("yellow", 1985, "J", "BMW")
+#
+# print car1
+# print car2
+# print car3
 
-car1 = car("white", 2003, "Jessica", "Dodge")
-car2 = car("black", 2001, "Jim", "Ford")
-car3 = car("yellow", 1985, "J", "BMW")
 
-print car1
-print car2
-print car3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

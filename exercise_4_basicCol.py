@@ -37,19 +37,20 @@ print "   ******************************"
 def get_input(message):
     user_input = str(raw_input(message))
     if user_input >= "1" and user_input <= "3":
-        second_choice = str(raw_input("Enter a phrase:  "))
         if first_choice == "1":
+            second_choice = str(raw_input("Enter a phrase:  "))
             new_file = open('text.txt', 'w+')
             new_file.write(second_choice)
             new_file.close()
             print new_file
-            return first_choice
+            return None
         elif first_choice == "2":
+            second_choice = str(raw_input("Enter a phrase:  "))
             print "You entered: " + second_choice
-            return first_choice
-        else:
+            return None
+        elif first_choice == "3":
             print "You are quitting"
-            return first_choice
+            return None
     else:
         print("Must be 1, 2, 3")
         return None
