@@ -48,6 +48,6 @@ def get_input():
             print "You are quitting"
     else:
         print("Must be 1, 2, 3")
-        return None
+        return get_input()
 
 get_input()
