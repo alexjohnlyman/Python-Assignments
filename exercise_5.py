@@ -1,44 +1,44 @@
 # My string generator
+
 import string
 import random
 
-def generator(size=10, chars=string.ascii_uppercase + string.digits):
-    second_choice = ''.join(random.choice(chars) for _ in range(size))
-    new_file = open('exercise_five.dat.txt', 'w+')
-    new_file.write(second_choice)
-    new_file.close()
-print generator()
+def generate_ran():
+    minLength = 1
+    maxLength = 15
+    for i in range(1, 11):
+        length = random.randint(minLength, maxLength)
+        chars = (''.join(random.choice(string.ascii_uppercase + string.digits) for i in range(length)))
+        with open('exercise_five.dat.txt', 'a+') as f:
+            f.write(chars)
+            f.write("\n")
+generate_ran()
 
-new_list= [new_file]
 
+lines = {}
+with open('exercise_five.dat.txt', 'r+') as f:
+    text = f.readlines()
+    for j in text:
+        for i in j:
+            if i in lines:
+                lines[i] += 1
+            else:
+                lines[i] = 1
 
 # this is tuple unpacking
-for key, value in new_file.items():
+for key, value in lines.items():
     print "%s ==> %s" % (key,value)
+
+
+# for key, value in dict.iteritems ()
+  n = 1
+    for i in range(0, len(text), n):
+
+
 
 # for i in len(new_list):
 #     lines.append(string + \n)
 # return '\n'.join(lines)
-
-#
-# def insert_newlines(string):
-#     lines = []
-#     for i in len(string), every):
-#         lines.append(string[i:i+every])
-#     return '\n'.join(lines)
-
-
-lines = []
-#
-# for char in 'exercise_five.dat.txt':
-#     lines = char \n
-#     print lines
-#
-# # puts each line into a list
-# with open('exercise_five.dat.txt', 'r+') as f:
-#     text = f.readlines()
-#     for line in text:
-#         lines = line.split()
 
 
 
