@@ -30,12 +30,6 @@ for key, value in lines.items():
     print "%s ==> %s" % (key,value)
 
 
-# for key, value in dict.iteritems ()
-  n = 1
-    for i in range(0, len(text), n):
-
-
-
 # for i in len(new_list):
 #     lines.append(string + \n)
 # return '\n'.join(lines)
