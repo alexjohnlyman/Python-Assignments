@@ -1,5 +1,4 @@
 # Excercise number 6
-# when you call your functions one of them will have a try except wrapped in there
 
 # open function
 def open_me(filename):
@@ -14,15 +13,16 @@ def try_me(filename):
     except IOError:
         print "File does not exist. Please choose another file."
 
-
-
-# include the try_except and open_me in here
+# # Try function with file open and error handling
 def try_and_open_me(filename):
-    open_me(filename):
-    def try_me(filename):
+    try:
+        with open(filename) as f:
+            text = f.read()
+            print text
+    except IOError:
+        print "File does not exist. Please choose another file."
 
-try_me("exercise_five_hive")
-
+# try_and_open_me("exercise_five_hive")
 
 
 
