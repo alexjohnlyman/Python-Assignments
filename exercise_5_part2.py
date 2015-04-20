@@ -5,6 +5,7 @@ with open('exercise_5_John.txt', 'r+') as f:
     text = f.readlines()
     for i in text:
         list = i.split()
+        print list
         for j in list:
             if j in words:
                 words[j] += 1
@@ -12,7 +13,7 @@ with open('exercise_5_John.txt', 'r+') as f:
                 words[j] = 1
 
 result = sorted(words.items(), key=lambda sorted_dict: sorted_dict[1], reverse=True)
-
+print result
 for key, value in result:
     print "%s ==> %s" % (key,value)
 
