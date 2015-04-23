@@ -1,76 +1,84 @@
 # I will have two functions (c->f) and (c<-f)
 # Exercise 7
 
-cities = {"Boston": "0 C", "Boise": "48 F", "Phoenix": "85 F", "Miami": "40 C", "Riverside": "30 C", "Baltimore": "32 F"}
+cities = {
+    "Boston": "0 C",
+    "Boise": "48 F",
+    "Phoenix": "85 F",
+    "Miami": "40 C",
+    "Riverside": "30 C",
+    "Baltimore": "32 F"
+}
 
 
-
-# for key, value in thing:
-#     print "%s ==> %s" % (key,value)
-
+def c2f(ctemp):
+    return ((ctemp * 9)/5)+32.0
 
 
-#
-def temperature():
-    converted_cities = {}
-    for v in cities:
-        for i in v:
-            if i == "C":
-                number = split.v()
-                print number
-                new_number = number * 33.8
-                print new_number
-                letter = "F"
-                value = new_number + letter
-                converted_cities[value].append(letter)
+def f2c(ftemp):
+    return ((ftemp -32)*5)/9
 
-            # if i == "F":
-            #     number, letter = split.v()
-            #     new_number = ((number - 32)/1.8)
-            #     letter = "F"
-            #     key, value = new_number, letter
-    print cities
-            # if i == "F":
-            #     number, letter = split.value(
+def convert_temperatures(city_temps):
+    for city, temps in city_temps.iteritems():
+        split = temps.split()
+        if split[1] == "F":
+            new_temp = f2c(int(split[0]))
+            print "In %s it is %s degrees Fahrenheit, which is equivalent to %s degrees Celsius" % (city, temps, new_temp)
+        if split[1] == "C":
+            new_temp = c2f(int(split[0]))
+            print "In %s it is %s degrees Fahrenheit, which is equivalent to %s degrees Celsius" % (city, temps, new_temp)
 
-temperature()
+
+convert_temperatures(cities)
+
+
 
 # def f2c():
 #
 #
 # def c2f():
 
+# Tuples
+# get
+    # Takes 2 parameters, a key and a default value
+# has_key
+    # Deprecated in Python 3 - use the in keyword
+# items
+    # Returns a list of tuples
+# keys
+    # Returns a list of keys
+# values
+    # Returns a list of values
 
 
-
-        # new_list = []
-            # for j in list:
-            #     new_list.append(j)
-            # print new_list
-        # print entry
-
-
-# entry[new_list[0]] = new_list[1] + new_list[-1] #pushing to a dict
-    # print entry
-    # #which will print the value of key1
-
-
-# for i in entry:
-#     temp = entry[i]
-#     c_or_f = temp[-1]
-
-
-# with open('exercise_7_temps.txt', 'r+') as f:
-#     text = f.readlines()
-#     no_commas = [i.replace(',', '') for i in text] #stripping quotes out of a list
-#     no_quotes = [i.replace('"', '') for i in no_commas] #stripping quotes out of a list
-#     final = zip(*[iter(no_quotes)]*1)
-# print final
-
-    # text = f.readlines()
-    # no_quotes = [i.replace('"', '') for i in text] #stripping quotes out of a list
-
-    # for i in no_quotes:
-    #     list = i.split()
-    #     zip(*[iter(list)]*2)
-    #     print list
+# Bob's solution
+# from temperature import f2c, c2f
+#
+# def c2f(ctemp):
+#     return (ctemp * 1.8) + 32.0
+#
+#
+# def f2c(ftemp):
+#
+# temps_dict = {
+#     "Boston": "0 C",
+#     "Boise": "48 F",
+#     "Phoenix": "85 F",
+#     "Miami": "40 C",
+#     "Riverside": "30 C",
+#     "Baltimore": "32 F"
+# }
+#
+#
+# def conversion(city_temps):
+#     for city, temp in city_temps.iteritems():
+#         split = temp.split()
+#         if split[1] == "F":
+#             new_temp = f2c(int(split[0]))
+#             print "In %s it is %s degrees Fahrenheit,\n\t which is equivalent to %s degrees Celsius" % (city, temp, new_temp)
+#
+#         if split[1] == "C":
+#             new_temp = c2f(int(split[0]))
+#             print "In %s it is %s degrees Celsius,\n\t which is equivalent to %s degrees Fahrenheit" % (city, temp, new_temp)
+#
+# conversion(temps_dict)
